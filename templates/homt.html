@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<h1>home page</h1>
+<!-- <h6>welcome {{ student.name }}</h6>
+
+
+h6>welcome {{ course.name }}</h6>
+<h6>welcome {{ course.duration }}</h6> -->
+
+<form action="{% url 'add' %}" method = "post">
+    {% csrf_token %}
+    <input type="text" name = "product_name" placeholder="enter product name">
+    <br>
+    <input type="text" name = "product_desc" placeholder="enter product description">
+    <br>
+    <input type="submit" value="add">
+
+</form>
+
+
+
+{% endblock %}
+
+
+
+
+
